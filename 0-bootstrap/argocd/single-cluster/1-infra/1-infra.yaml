@@ -5,7 +5,7 @@ metadata:
   name: infra
 spec:
   sourceRepos:
-  - https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apic.git
+  - https://github.com/jesusmah/multi-tenancy-gitops-apic.git
   - https://github.com/cloud-native-toolkit/multi-tenancy-gitops-infra.git
   destinations:
   - namespace: cloudpak
@@ -63,7 +63,7 @@ spec:
   project: default
   source:
     path: 0-bootstrap/argocd/single-cluster/1-infra
-    repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apic.git
+    repoURL: https://github.com/jesusmah/multi-tenancy-gitops-apic.git
     targetRevision: kustomize
   syncPolicy:
     automated:

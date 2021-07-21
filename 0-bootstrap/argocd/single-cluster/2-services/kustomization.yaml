@@ -1,11 +1,12 @@
 resources:
 # IBM Software - Cloud Pak for Integration
 #- argocd/operators/ibm-ace-operator.yaml
-#- argocd/operators/ibm-apic-operator.yaml
+- argocd/operators/ibm-apic-operator.yaml
+- argocd/instances/ibm-apic-instance.yaml
 #- argocd/operators/ibm-aspera-operator.yaml
 #- argocd/operators/ibm-assetrepository-operator.yaml
 #- argocd/operators/ibm-cp4i-operators.yaml
-#- argocd/operators/ibm-datapower-operator.yaml
+- argocd/operators/ibm-datapower-operator.yaml
 #- argocd/operators/ibm-eventstreams-operator.yaml
 #- argocd/operators/ibm-mq-operator.yaml
 #- argocd/operators/ibm-opsdashboard-operator.yaml
@@ -24,10 +25,10 @@ resources:
 #- argocd/instances/shared-secrets.yaml
 
 # IBM Foundations / Common Services
-#- argocd/operators/ibm-foundations.yaml
+- argocd/operators/ibm-foundations.yaml
 
 # IBM Catalogs
-#- argocd/operators/ibm-catalogs.yaml
+- argocd/operators/ibm-catalogs.yaml
 
 # Required for IBM MQ
 #- argocd/instances/openldap.yaml

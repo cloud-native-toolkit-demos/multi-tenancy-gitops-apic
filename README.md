@@ -1,6 +1,10 @@
 # Cloud Native Toolkit Deployment Guides
 
 ## Apply demo sealedsecret key to all clusters
+If you don't have the Sealed Secrets Operator running already in your OpenShift cluster in the `sealed-secrets` namespace, create such namespace first.
+```
+oc new-project sealed-secrets
+```
 Download the private key [sealed-secrets-ibm-demo-key.yaml](https://bit.ly/demo-sealed-master) used to seal any secret contained in this demonstration and apply it to the cluster.
 ```
 oc apply -f sealed-secrets-ibm-demo-key.yaml

@@ -4,6 +4,8 @@ metadata:
   name: ibm-apic-instance
   annotations:
     argocd.argoproj.io/sync-wave: "250"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
   labels:
     gitops.tier.group: cloudpak
 spec:

@@ -5,9 +5,7 @@ metadata:
   name: services
 spec:
   sourceRepos:
-  - https://github.com/jesusmah/multi-tenancy-gitops-apic.git
-  # Remove the repo right below before PR
-  - https://github.com/jesusmah/multi-tenancy-gitops-apps.git
+  - https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apic.git
   - https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apps.git
   # Do not change the below repository URL
   - https://github.com/cloud-native-toolkit/multi-tenancy-gitops-services.git
@@ -39,8 +37,6 @@ spec:
   - namespace: openldap
     server: https://kubernetes.default.svc
   - namespace: instana-agent
-    server: https://kubernetes.default.svc
-  - namespace: apic-pipelines-prod
     server: https://kubernetes.default.svc
   clusterResourceWhitelist:
   # TODO: SCC needs to be moved to 1-infra, here for now for artifactory
@@ -94,7 +90,7 @@ spec:
   project: default
   source:
     path: 0-bootstrap/argocd/single-cluster/2-services
-    repoURL: https://github.com/jesusmah/multi-tenancy-gitops-apic.git
+    repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apic.git
     targetRevision: kustomize
   syncPolicy:
     automated:

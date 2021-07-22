@@ -5,8 +5,8 @@ metadata:
   name: applications
 spec:
   sourceRepos:
-  - https://github.com/jesusmah/multi-tenancy-gitops-apic.git
-  - https://github.com/jesusmah/multi-tenancy-gitops-apps.git
+  - https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apic.git
+  - https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apps.git
   destinations:
   - namespace: ci
     server: https://kubernetes.default.svc
@@ -15,8 +15,6 @@ spec:
   - namespace: staging
     server: https://kubernetes.default.svc
   - namespace: prod
-    server: https://kubernetes.default.svc
-  - namespace: apic-pipelines-prod
     server: https://kubernetes.default.svc
   roles:
   # A role which provides read-only access to all applications in the project
@@ -40,7 +38,7 @@ spec:
   project: default
   source:
     path: 0-bootstrap/argocd/single-cluster/3-apps
-    repoURL: https://github.com/jesusmah/multi-tenancy-gitops-apic.git
+    repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apic.git
     targetRevision: kustomize
   syncPolicy:
     automated:

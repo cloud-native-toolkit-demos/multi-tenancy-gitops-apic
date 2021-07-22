@@ -15,7 +15,7 @@ spec:
   project: services
   source:
     path: apic/config/argocd/prod
-    repoURL: https://github.com/jesusmah/multi-tenancy-gitops-apps.git
+    repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apps.git
     targetRevision: master
   syncPolicy:
     automated:

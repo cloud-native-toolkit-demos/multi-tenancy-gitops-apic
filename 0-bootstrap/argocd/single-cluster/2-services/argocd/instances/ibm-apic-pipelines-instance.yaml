@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ibm-apic-instance
+  name: ibm-apic-pipelines-instance
   annotations:
     argocd.argoproj.io/sync-wave: "250"
   labels:
     gitops.tier.group: cloudpak
 spec:
   destination:
-    namespace: prod
+    namespace: apic-pipelines-prod
     server: https://kubernetes.default.svc
   project: services
   source:
-    path: apic/config/argocd/prod
+    path: apic/config/argocd/apic-pipelines-prod
     repoURL: https://github.com/jesusmah/multi-tenancy-gitops-apps.git
     targetRevision: master
   syncPolicy:

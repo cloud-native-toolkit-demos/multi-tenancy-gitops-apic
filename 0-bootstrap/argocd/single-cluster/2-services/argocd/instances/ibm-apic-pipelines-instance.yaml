@@ -8,7 +8,7 @@ metadata:
     gitops.tier.group: cloudpak
 spec:
   destination:
-    namespace: apic-pipelines-prod
+    namespace: openshift-gitops
     server: https://kubernetes.default.svc
   project: services
   source:

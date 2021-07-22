@@ -10,7 +10,7 @@ metadata:
     gitops.tier.group: cloudpak
 spec:
   destination:
-    namespace: prod
+    namespace: openshift-gitops
     server: https://kubernetes.default.svc
   project: services
   source:

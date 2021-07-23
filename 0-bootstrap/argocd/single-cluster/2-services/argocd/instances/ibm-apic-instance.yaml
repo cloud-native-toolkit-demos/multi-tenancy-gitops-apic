@@ -1,18 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: shared-secrets
+  name: ibm-apic-instance
   annotations:
     argocd.argoproj.io/sync-wave: "250"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
   labels:
     gitops.tier.group: cloudpak
 spec:
   destination:
-    namespace: prod
+    namespace: openshift-gitops
     server: https://kubernetes.default.svc
   project: services
   source:
-    path: shared/config/ibm-entitlement-key
+    path: apic/config/argocd/prod
     repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apps.git
     targetRevision: master
   syncPolicy:

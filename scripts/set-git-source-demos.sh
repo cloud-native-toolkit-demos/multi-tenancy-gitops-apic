@@ -13,14 +13,15 @@ set -u
 #
 # For example:
 #
-# GIT_REPO=${GIT_REPO:-multi-tenancy-gitops-infra.git}
-# GIT_REPO=${GIT_REPO:-multi-tenancy-gitops-services.git}
-# GIT_REPO=${GIT_REPO:-multi-tenancy-gitops-apps.git}
-GIT_REPO=${GIT_REPO:-multi-tenancy-gitops-infra.git}
+# GIT_REPO=${GIT_REPO:-multi-tenancy-gitops-apic.git}
+# GIT_REPO=${GIT_REPO:-multi-tenancy-gitops-ace.git}
+# GIT_REPO=${GIT_REPO:-multi-tenancy-gitops-cp4ba.git}
+# GIT_REPO=${GIT_REPO:-multi-tenancy-gitops-cp4d.git}
+GIT_REPO=${GIT_REPO:-multi-tenancy-gitops-apic.git}
 GIT_BASEURL=${GIT_BASEURL:-https://github.com}
 GIT_HOST=${GIT_HOST:-github.com}
-GIT_BRANCH=${GIT_BRANCH:-master}
-GIT_FROM_BRANCH=${GIT_FROM_BRANCH:-master}
+GIT_BRANCH=${GIT_BRANCH:-kustomize}
+GIT_FROM_BRANCH=${GIT_FROM_BRANCH:-kustomize}
 
 
 echo "Setting source git to ${GIT_BASEURL}/${GIT_USER}/${GIT_REPO}"
@@ -29,9 +30,9 @@ find ${SCRIPTDIR}/../0-bootstrap -name '*.yaml' -print0 |
   while IFS= read -r -d '' File; do
     if grep -q "kind: Application\|kind: AppProject" "$File"; then
       echo "$File"
-      sed -i'.bak' -e "s#repoURL: https://github.com/cloud-native-toolkit/${GIT_REPO}#repoURL: ${GIT_BASEURL}/${GIT_USER}/${GIT_REPO}#" $File
-      sed -i'.bak' -e "s#repoURL: github.com/cloud-native-toolkit/${GIT_REPO}#repoURL: ${GIT_HOST}/${GIT_USER}/${GIT_REPO}#" $File
-      sed -i'.bak' -e "s#- https://github.com/cloud-native-toolkit/${GIT_REPO}#- ${GIT_BASEURL}/${GIT_USER}/${GIT_REPO}#" $File
+      sed -i'.bak' -e "s#repoURL: https://github.com/cloud-native-toolkit-demos/${GIT_REPO}#repoURL: ${GIT_BASEURL}/${GIT_USER}/${GIT_REPO}#" $File
+      sed -i'.bak' -e "s#repoURL: github.com/cloud-native-toolkit-demos/${GIT_REPO}#repoURL: ${GIT_HOST}/${GIT_USER}/${GIT_REPO}#" $File
+      sed -i'.bak' -e "s#- https://github.com/cloud-native-toolkit-demos/${GIT_REPO}#- ${GIT_BASEURL}/${GIT_USER}/${GIT_REPO}#" $File
       sed -i'.bak' -e "s#targetRevision: ${GIT_FROM_BRANCH}#targetRevision: ${GIT_BRANCH}#" $File
       rm "${File}.bak"
     fi

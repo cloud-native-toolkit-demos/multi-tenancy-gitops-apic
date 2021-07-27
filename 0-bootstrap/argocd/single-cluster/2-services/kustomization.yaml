@@ -1,27 +1,39 @@
 resources:
 # IBM Software - Cloud Pak for Integration
-#- argocd/operators/ibm-ace-operator.yaml
+# - argocd/operators/ibm-ace-operator.yaml
+# - argocd/operators/ibm-apic-operator.yaml
+# - argocd/instances/ibm-apic-instance.yaml
+# - argocd/operators/ibm-aspera-operator.yaml
+# - argocd/operators/ibm-assetrepository-operator.yaml
+# - argocd/operators/ibm-cp4i-operators.yaml
+# - argocd/operators/ibm-datapower-operator.yaml
+# - argocd/operators/ibm-eventstreams-operator.yaml
+# - argocd/operators/ibm-mq-operator.yaml
+# - argocd/operators/ibm-opsdashboard-operator.yaml
+# - argocd/operators/ibm-platform-navigator.yaml
+# - argocd/instances/ibm-platform-navigator-instance.yaml
+
+# IBM Software - IBM API Connect
+# IBM API Connect Operator
 - argocd/operators/ibm-apic-operator.yaml
+# API Connect instance on RedHat OpenShift Kubernetes Service on IBM Cloud VPC Gen2 Infrastructure
 - argocd/instances/ibm-apic-instance.yaml
+# API Connect instance on RedHat OpenShift Kubernetes Service on IBM Cloud Classic Infrastructure
+# - argocd/instances/ibm-apic-instance-classic.yaml
+# API Connect OpenShift pipelines for Post Install Configuration and Products and APIs Publishing
 - argocd/instances/ibm-apic-pipelines-instance.yaml
-#- argocd/operators/ibm-aspera-operator.yaml
-#- argocd/operators/ibm-assetrepository-operator.yaml
-#- argocd/operators/ibm-cp4i-operators.yaml
+# The IBM API Connect operator depends on The IBM DataPower operator as the creation of an API Connect Cluster requires the deployment of an IBM DataPower Gateway.
 - argocd/operators/ibm-datapower-operator.yaml
-#- argocd/operators/ibm-eventstreams-operator.yaml
-#- argocd/operators/ibm-mq-operator.yaml
-#- argocd/operators/ibm-opsdashboard-operator.yaml
-#- argocd/operators/ibm-platform-navigator.yaml
-#- argocd/instances/ibm-platform-navigator-instance.yaml
 
 # IBM Software - Cloud Pak for Business Automation
-#- argocd/operators/ibm-cp4a-operator.yaml
-#- argocd/operators/ibm-automation-foundation-core-operator.yaml
-#- argocd/instances/cp4a-cluster-instance.yaml
+# - argocd/operators/ibm-cp4a-operator.yaml
+# - argocd/operators/ibm-automation-foundation-core-operator.yaml
+# - argocd/instances/cp4a-cluster-instance.yaml
 
 # Pre-req for Cloud Pak for Business Automation Operator
-#- argocd/instances/cp4a-operator-pvc.yaml
-#- argocd/instances/cp4a-operator-rolebinding.yaml
+# - argocd/instances/cp4a-operator-pvc.yaml
+# - argocd/instances/cp4a-operator-rolebinding.yaml
+
 # IBM Entitlement Key for IBM Software
 - argocd/instances/shared-secrets.yaml
 
@@ -32,31 +44,31 @@ resources:
 - argocd/operators/ibm-catalogs.yaml
 
 # Required for IBM MQ
-#- argocd/instances/openldap.yaml
+# - argocd/instances/openldap.yaml
 # Required for IBM ACE, IBM MQ
-#- argocd/operators/cert-manager.yaml
-#- argocd/instances/cert-manager-instance.yaml
+# - argocd/operators/cert-manager.yaml
+# - argocd/instances/cert-manager-instance.yaml
 
 # Sealed Secrets
 - argocd/operators/sealed-secrets.yaml
 - argocd/instances/sealed-secrets-instance.yaml
 
 # CICD
-#- argocd/operators/grafana.yaml
-#- argocd/instances/grafana-instance.yaml
-#- argocd/instances/artifactory.yaml
-#- argocd/instances/chartmuseum.yaml
-#- argocd/instances/developer-dashboard.yaml
-#- argocd/instances/swaggereditor.yaml
-#- argocd/instances/sonarqube.yaml
-#- argocd/instances/pact-broker.yaml
-#- argocd/instances/cntk-pipeline-tasks.yaml
+# - argocd/operators/grafana.yaml
+# - argocd/instances/grafana-instance.yaml
+# - argocd/instances/artifactory.yaml
+# - argocd/instances/chartmuseum.yaml
+# - argocd/instances/developer-dashboard.yaml
+# - argocd/instances/swaggereditor.yaml
+# - argocd/instances/sonarqube.yaml
+# - argocd/instances/pact-broker.yaml
+# - argocd/instances/cntk-pipeline-tasks.yaml
 # In OCP 4.7+ we need to install openshift-pipelines
-#- argocd/operators/openshift-pipelines.yaml
+# - argocd/operators/openshift-pipelines.yaml
 
 # Service Mesh
-#- argocd/operators/elasticsearch.yaml
-#- argocd/operators/jaeger.yaml
-#- argocd/operators/kiali.yaml
-#- argocd/operators/openshift-service-mesh.yaml
-#- argocd/instances/openshift-service-mesh-instance.yaml
+# - argocd/operators/elasticsearch.yaml
+# - argocd/operators/jaeger.yaml
+# - argocd/operators/kiali.yaml
+# - argocd/operators/openshift-service-mesh.yaml
+# - argocd/instances/openshift-service-mesh-instance.yaml

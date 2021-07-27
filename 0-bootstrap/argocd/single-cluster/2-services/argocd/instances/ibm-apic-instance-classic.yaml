@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ibm-apic-instance-classic
+  annotations:
+    argocd.argoproj.io/sync-wave: "250"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    gitops.tier.group: cloudpak
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  project: services
+  source:
+    path: apic/config/argocd/classic
+    repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apps.git
+    targetRevision: master
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

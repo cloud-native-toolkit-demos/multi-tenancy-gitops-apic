@@ -64,7 +64,7 @@ spec:
   source:
     path: 0-bootstrap/argocd/single-cluster/1-infra
     repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apic.git
-    targetRevision: kustomize
+    targetRevision: apic-dte
   syncPolicy:
     automated:
       prune: true

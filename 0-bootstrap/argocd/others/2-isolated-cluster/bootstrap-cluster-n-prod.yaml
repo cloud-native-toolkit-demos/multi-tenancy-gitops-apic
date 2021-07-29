@@ -11,7 +11,7 @@ spec:
   source:
     path: 0-bootstrap/argocd/others/2-isolated-cluster/cluster-n-prod
     repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apic.git
-    targetRevision: kustomize
+    targetRevision: 4.6-vpc
   syncPolicy:
     automated:
       prune: true

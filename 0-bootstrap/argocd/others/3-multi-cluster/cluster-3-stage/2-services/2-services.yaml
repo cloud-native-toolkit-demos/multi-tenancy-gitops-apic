@@ -85,7 +85,7 @@ spec:
   source:
     path: 0-bootstrap/argocd/others/3-multi-cluster/cluster-3-stage/2-services
     repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops.git
-    targetRevision: 4.7-vpc
+    targetRevision: ocp4.7-vpc
   syncPolicy:
     automated:
       prune: true

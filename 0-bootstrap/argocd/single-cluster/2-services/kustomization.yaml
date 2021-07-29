@@ -64,7 +64,7 @@ resources:
 # - argocd/instances/pact-broker.yaml
 # - argocd/instances/cntk-pipeline-tasks.yaml
 # In OCP 4.7+ we need to install openshift-pipelines
-# - argocd/operators/openshift-pipelines.yaml
+- argocd/operators/openshift-pipelines.yaml
 
 # Service Mesh
 # - argocd/operators/elasticsearch.yaml

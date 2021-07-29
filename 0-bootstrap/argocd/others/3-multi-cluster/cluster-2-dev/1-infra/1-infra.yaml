@@ -62,7 +62,7 @@ spec:
   source:
     path: 0-bootstrap/argocd/others/3-multi-cluster/cluster-2-dev/1-infra
     repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops.git
-    targetRevision: kustomize
+    targetRevision: 4.7-vpc
   syncPolicy:
     automated:
       prune: true

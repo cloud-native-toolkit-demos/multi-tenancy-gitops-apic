@@ -91,7 +91,7 @@ spec:
   source:
     path: 0-bootstrap/argocd/single-cluster/2-services
     repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apic.git
-    targetRevision: 4.6-vpc
+    targetRevision: ocp4.6-vpc
   syncPolicy:
     automated:
       prune: true

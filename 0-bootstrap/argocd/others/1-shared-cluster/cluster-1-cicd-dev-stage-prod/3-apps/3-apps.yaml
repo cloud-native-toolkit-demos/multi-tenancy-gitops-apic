@@ -43,7 +43,7 @@ spec:
   source:
     path: 0-bootstrap/argocd/others/1-shared-cluster/cluster-1-cicd-dev-stage-prod/3-apps
     repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops.git
-    targetRevision: 4.7-classic
+    targetRevision: ocp4.7-classic
   syncPolicy:
     automated:
       prune: true

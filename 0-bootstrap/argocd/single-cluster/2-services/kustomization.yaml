@@ -18,8 +18,8 @@ resources:
 - argocd/operators/ibm-apic-operator.yaml
 # API Connect instance on RedHat OpenShift Kubernetes Service on IBM Cloud VPC Gen2 Infrastructure
 # - argocd/instances/ibm-apic-instance.yaml
-# API Connect instance on RedHat OpenShift Kubernetes Service on IBM Cloud Classic Infrastructure
-- argocd/instances/ibm-apic-instance-classic.yaml
+# API Connect instance on RedHat OpenShift Kubernetes Service on IBM Cloud 4.6-classic Infrastructure
+- argocd/instances/ibm-apic-instance-4.6-classic.yaml
 # API Connect OpenShift pipelines for Post Install Configuration and Products and APIs Publishing
 - argocd/instances/ibm-apic-pipelines-instance.yaml
 # The IBM API Connect operator depends on The IBM DataPower operator as the creation of an API Connect Cluster requires the deployment of an IBM DataPower Gateway.

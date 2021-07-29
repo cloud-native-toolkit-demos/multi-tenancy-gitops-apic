@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ibm-apic-instance-classic
+  name: ibm-apic-instance-4.6-classic
   annotations:
     argocd.argoproj.io/sync-wave: "250"
   finalizers:
@@ -14,7 +14,7 @@ spec:
     server: https://kubernetes.default.svc
   project: services
   source:
-    path: apic/config/argocd/classic
+    path: apic/config/argocd/4.6-classic
     repoURL: https://github.com/cloud-native-toolkit-demos/multi-tenancy-gitops-apps.git
     targetRevision: master
   syncPolicy:
